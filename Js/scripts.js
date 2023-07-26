@@ -62,3 +62,6 @@ function divisibleBy(numbers, divisor) {
 const areaOrPerimeter = function(l , w) {
   return l == w ? l*w : 2*(l + w)
 };
+
+//Find the sum of all multiples of n below m
+
