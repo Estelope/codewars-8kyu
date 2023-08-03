@@ -63,5 +63,27 @@ const areaOrPerimeter = function(l , w) {
   return l == w ? l*w : 2*(l + w)
 };
 
-//Find the sum of all multiples of n below m
+// quarter of
+const quarterOf = (month) => {
+  if (month <= 3){
+    return 1;
+  }
+    if (month >= 4 && month <=6){
+    return 2;
+  }
+    if (month >= 7 && month <=9){
+    return 3;
+  }
+      if (month >= 10 && month <=12){
+    return 4;
+  }
+}
+//Take an array and remove every second element. 
 
+function removeEveryOther(arr){
+  const results = []
+  for (let i= 0;i < arr.length; i++){
+  if (i % 2 === 0)
+  results.push(arr[i])}
+  return results
+  }
