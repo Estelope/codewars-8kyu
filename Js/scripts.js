@@ -87,3 +87,22 @@ function removeEveryOther(arr){
   results.push(arr[i])}
   return results
   }
+
+// build a staircase For example n = 3 result in:
+//"I\n I\n  I"
+
+  function drawStairs(n) {
+    if (n === 1) {
+      return 'I';
+    }
+  
+    let staircase = "";
+  
+    for (let i = 0; i < n; i++) {
+      let line = " ".repeat(i) + "I".repeat(n - i);
+      staircase += line + '\n';
+    }
+  
+    return staircase;
+  }
+  
