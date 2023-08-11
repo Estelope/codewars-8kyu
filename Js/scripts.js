@@ -116,7 +116,7 @@ function removeEveryOther(arr){
   
   }
   
-
+//given age Make a function that receive age, and return what they drink.
   function peopleWithAgeDrink(old) {
     if (old < 14){
     return "drink toddy"}
@@ -127,3 +127,13 @@ function removeEveryOther(arr){
       else if (old >= 21){
     return "drink whisky"}
     };
+
+    // Create a method that takes as input a name, city, and state to welcome a person. Note that name will be an array consisting of one or more values that should be joined together with one space between each, and the length of the name array in test cases will vary.
+
+
+    function sayHello( name, city, state ) {
+      let fullName = name.join(' ')
+      
+      
+      return `Hello, ${fullName}! Welcome to ${city}, ${state}!`
+      }
