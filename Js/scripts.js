@@ -59,81 +59,101 @@ function divisibleBy(numbers, divisor) {
 
 
 // finds area if sides are equal or perimiter if not
-const areaOrPerimeter = function(l , w) {
-  return l == w ? l*w : 2*(l + w)
+const areaOrPerimeter = function (l, w) {
+  return l == w ? l * w : 2 * (l + w)
 };
 
 // quarter of
 const quarterOf = (month) => {
-  if (month <= 3){
+  if (month <= 3) {
     return 1;
   }
-    if (month >= 4 && month <=6){
+  if (month >= 4 && month <= 6) {
     return 2;
   }
-    if (month >= 7 && month <=9){
+  if (month >= 7 && month <= 9) {
     return 3;
   }
-      if (month >= 10 && month <=12){
+  if (month >= 10 && month <= 12) {
     return 4;
   }
 }
 //Take an array and remove every second element. 
 
-function removeEveryOther(arr){
+function removeEveryOther(arr) {
   const results = []
-  for (let i= 0;i < arr.length; i++){
-  if (i % 2 === 0)
-  results.push(arr[i])}
-  return results
+  for (let i = 0; i < arr.length; i++) {
+    if (i % 2 === 0)
+      results.push(arr[i])
   }
+  return results
+}
 
 // build a staircase For example n = 3 result in:
 //"I\n I\n  I"
 
-  function drawStairs(n) {
-    if (n === 1) {
-      return 'I';
-    }
-  
-    let staircase = "";
-  
-    for (let i = 0; i < n; i++) {
-      let line = " ".repeat(i) + "I".repeat(n - i);
-      staircase += line + '\n';
-    }
-  
-    return staircase;
+function drawStairs(n) {
+  if (n === 1) {
+    return 'I';
   }
-  
 
- // Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside. The strings will not be the same length, but they may be empty ( zero length ).
+  let staircase = "";
 
-  function solution(a, b){
-    if (a.length > b.length){
-  return b + a  +b }
-    else {return a+b+a}
-  
+  for (let i = 0; i < n; i++) {
+    let line = " ".repeat(i) + "I".repeat(n - i);
+    staircase += line + '\n';
   }
-  
+
+  return staircase;
+}
+
+
+// Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside. The strings will not be the same length, but they may be empty ( zero length ).
+
+function solution(a, b) {
+  if (a.length > b.length) {
+    return b + a + b
+  }
+  else { return a + b + a }
+
+}
+
 //given age Make a function that receive age, and return what they drink.
-  function peopleWithAgeDrink(old) {
-    if (old < 14){
-    return "drink toddy"}
-      else if (old < 18){
-    return "drink coke"}
-      else if(old < 21){
-    return "drink beer"}
-      else if (old >= 21){
-    return "drink whisky"}
-    };
+function peopleWithAgeDrink(old) {
+  if (old < 14) {
+    return "drink toddy"
+  }
+  else if (old < 18) {
+    return "drink coke"
+  }
+  else if (old < 21) {
+    return "drink beer"
+  }
+  else if (old >= 21) {
+    return "drink whisky"
+  }
+};
 
-    // Create a method that takes as input a name, city, and state to welcome a person. Note that name will be an array consisting of one or more values that should be joined together with one space between each, and the length of the name array in test cases will vary.
+// Create a method that takes as input a name, city, and state to welcome a person. Note that name will be an array consisting of one or more values that should be joined together with one space between each, and the length of the name array in test cases will vary.
 
 
-    function sayHello( name, city, state ) {
-      let fullName = name.join(' ')
-      
-      
-      return `Hello, ${fullName}! Welcome to ${city}, ${state}!`
-      }
+function sayHello(name, city, state) {
+  let fullName = name.join(' ')
+
+
+  return `Hello, ${fullName}! Welcome to ${city}, ${state}!`
+}
+
+//Jenny has written a function that returns a greeting for a user. However, she's in love with Johnny, and would like to greet him slightly different
+
+function greet(name) {
+  if (name === "Johnny") {
+    return "Hello, my love!"
+  }
+  else return "Hello, " + name + "!";
+}
+
+// better formatting best practice
+function greet(name){
+  return "Hello, " + (name == "Johnny" ? "my love" : name) + "!";
+}
