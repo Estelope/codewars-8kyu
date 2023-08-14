@@ -157,3 +157,10 @@ function greet(name) {
 function greet(name){
   return "Hello, " + (name == "Johnny" ? "my love" : name) + "!";
 }
+//Input: Array of elements["h","o","l","a"]
+//Output: String with comma delimited elements of the array in th same order.
+function printArray(arr){
+ let array = arr.join(",")
+return array
+}
+// didnt need (",") inside join method its implied that commas are added with join method 
