@@ -164,3 +164,14 @@ function printArray(arr){
 return array
 }
 // didnt need (",") inside join method its implied that commas are added with join method 
+
+function isBetterThanAverage(yourScore, peersScores) {
+ 
+  const totalScores = peersScores.reduce((sum, score) => sum + score, 0);
+  
+
+  const average = (totalScores + yourScore) / (peersScores.length + 1);
+  
+
+  return yourScore > average;
+}
