@@ -154,24 +154,24 @@ function greet(name) {
 }
 
 // better formatting best practice
-function greet(name){
+function greet(name) {
   return "Hello, " + (name == "Johnny" ? "my love" : name) + "!";
 }
 //Input: Array of elements["h","o","l","a"]
 //Output: String with comma delimited elements of the array in th same order.
-function printArray(arr){
- let array = arr.join(",")
-return array
+function printArray(arr) {
+  let array = arr.join(",")
+  return array
 }
 // didnt need (",") inside join method its implied that commas are added with join method 
 
 function isBetterThanAverage(yourScore, peersScores) {
- 
+
   const totalScores = peersScores.reduce((sum, score) => sum + score, 0);
-  
+
 
   const average = (totalScores + yourScore) / (peersScores.length + 1);
-  
+
 
   return yourScore > average;
 }
@@ -189,4 +189,18 @@ function correctTail(body, tail) {
   } else {
     return false;
   }
+}
+
+
+// In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+function makeNegative(num) {
+  if (num > 0) {
+    return -num
+  }
+  else return num
+}
+
+// concise with ternary example 
+function makeNegative(num) {
+  return (num > 0) ? -num : num;
 }
