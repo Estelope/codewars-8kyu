@@ -204,3 +204,42 @@ function makeNegative(num) {
 function makeNegative(num) {
   return (num > 0) ? -num : num;
 }
+
+
+function add(a, b) {
+  return a + b;
+}
+
+function subt(a, b) {
+  return a - b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+function divide(a, b) {
+  return a / b;
+}
+
+function mod(a, b) {
+  return a % b;
+}
+
+function exponent(a, b) {
+  return Math.pow(a, b);
+}
+
+// Write a function that takes a list of at least four elements as an argument and returns a list of the middle two or three elements in reverse order.
+
+function reverseMiddleElements(arr) {
+  if (arr.length < 4) {
+
+      return null;
+  }
+
+  const middleIndex = Math.floor(arr.length / 2);
+  const numElements = arr.length % 2 === 0 ? 2 : 3;
+
+  return arr.slice(middleIndex - Math.floor(numElements / 2), middleIndex + Math.ceil(numElements / 2)).reverse();
+}
