@@ -231,7 +231,7 @@ function exponent(a, b) {
 }
 
 // Write a function that takes a list of at least four elements as an argument and returns a list of the middle two or three elements in reverse order.
-
+// 7 kyu
 function reverseMiddleElements(arr) {
   if (arr.length < 4) {
 
@@ -242,4 +242,14 @@ function reverseMiddleElements(arr) {
   const numElements = arr.length % 2 === 0 ? 2 : 3;
 
   return arr.slice(middleIndex - Math.floor(numElements / 2), middleIndex + Math.ceil(numElements / 2)).reverse();
+}
+
+
+//Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+function removeExclamationMarks(arr){
+  if (arr.contains('!')){
+    return arr.replace('!', '')
+  }
+  return arr;
+  
 }
