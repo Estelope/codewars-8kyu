@@ -251,5 +251,16 @@ function removeExclamationMarks(arr){
     return arr.replace('!', '')
   }
   return arr;
-  
+}
+
+function flickSwitch(arr) {
+  let switchFlag = false;
+  return arr.map(item => {
+      if (item === 'flick') {
+          switchFlag = !switchFlag; 
+          return switchFlag; 
+      } else {
+          return switchFlag; 
+      }
+  });
 }
