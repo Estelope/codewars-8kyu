@@ -264,3 +264,17 @@ function flickSwitch(arr) {
       }
   });
 }
+
+function replace(s){
+  return s.replace(/[aeiouAEIOU]/g, '!');
+}
+
+function evenOrOdd(number) {
+  if (number % 2 === 0 ){
+  return "Even";
+  }
+  else {number % 2 === 1}{
+  return "Odd"
+  }
+  
+  }
